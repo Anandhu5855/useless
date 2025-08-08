@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  font-family: 'Comic Neue', cursive, Comic Sans MS, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff8dc;
+  border: 5px solid #ff4500;
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 0 20px #ff4500aa;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #d72631;
+  text-shadow: 2px 2px #f9a825;
+}
+
+.warning-banner {
+  background: #ff0000;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px #000;
+}
+
+button {
+  background-color: #d72631;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 20px;
+  margin: 10px 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px #a31b22;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #aaa;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #f44336;
+}
+
+.toggle-switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  margin: 15px 0 20px 0;
+  user-select: none;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #d72631;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+#status {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #d72631;
+  min-height: 1.5em;
+}
